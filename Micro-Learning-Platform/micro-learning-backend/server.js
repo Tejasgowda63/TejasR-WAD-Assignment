@@ -2,6 +2,7 @@ const express = require('express');
 const cors = require('cors');
 const dotenv = require('dotenv');
 const { Pool } = require('pg');
+const jwt = require('jsonwebtoken');
 const bcrypt = require('bcryptjs');
 
 dotenv.config();
@@ -43,6 +44,22 @@ app.post('/register', async (req, res) => {
     res.json(students[0]);
   } catch (err) {
     res.status(500).json({ error: 'Registration failed' });
+  }
+});
+
+// Login for a student which also generates a jsonwebtoken
+app.post('/login', async (req, res) => {
+  const { email, password } = req.body;
+  if (!email || !password) return res.status(400).json({ error: 'Fill the Missing fields' });
+
+  try {
+    const students = await queryDb('SELECT * FROM students WHERE email = $1', [email]);
+    const student = students[0];
+
+    const token = jwt.sign({ id: student.id }, process.env.JWT_SECRET, { expiresIn: '1h' });
+    res.json({ token });
+  } catch (err) {
+    res.status(500).json({ error: 'Login failed' });
   }
 });
 
