@@ -18,7 +18,8 @@ const Navbar = ({ isLoggedIn, onLogout, studentId }) => {
         }
       };
       fetchTotalScore();
-      // WebSocket connection
+
+      // WebSocket connection sourse from https://github.com/websockets/ws#simple-server
       const socket = new WebSocket('ws://13.235.83.147:5001');
       setSocket(socket);
       socket.onmessage = (event) => {

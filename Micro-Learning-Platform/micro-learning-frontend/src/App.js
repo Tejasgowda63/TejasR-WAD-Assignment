@@ -11,6 +11,8 @@ import Quiz from './components/user/Quiz';
 import Navbar from './components/Navbar';
 import AdminLogin from './components/admin/AdminLogin';
 import AdminDashboard from './components/admin/AdminDashboard';
+import AddTopic from './components/admin/AddTopic';
+import AddQuestion from './components/admin/AddQuestion';
 
 const App = () => {
   const [topics, setTopics] = useState([]);
@@ -82,6 +84,8 @@ const App = () => {
           <Routes>
           <Route path="/admin/login" element={<AdminLogin />} />
           <Route path="/admin/dashboard" element={<AdminDashboard />} />
+          <Route path="/admin/add-topic" element={<AddTopic />} />
+          <Route path="/admin/add-question" element={<AddQuestion />} />
             <Route path="/" element={isLoggedIn ? <Navigate to="/user/dashboard" /> : <Navigate to="/login" />} />
             <Route path="/login" element={!isLoggedIn ? (isRegistering ? (<Register onRegister={handleRegister} onToggleLogin={() => setIsRegistering(false)} />) 
             : (<Login onLogin={handleLogin} onToggleRegister={() => setIsRegistering(true)} />)) 

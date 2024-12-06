@@ -135,7 +135,7 @@ app.post("/admin/add-question", async (req, res) => {
   }
 });
 
-// WebSocket server
+// WebSocket server sourse from https://github.com/websockets/ws#simple-server
 const wss = new WebSocket.Server({ noServer: true });
 
 wss.on('connection', (ws) => {
