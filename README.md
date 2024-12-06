@@ -8,7 +8,7 @@ This is a **React-based web application** designed as a micro-learning platform.
 ## User Registration
 ![image](https://github.com/user-attachments/assets/10109b30-6800-45b7-8e7b-869abc11fbc0)
 
-##User Dashboard
+## User Dashboard
 ![image](https://github.com/user-attachments/assets/d92caae7-d4b8-4439-b655-bd30abfd255f)
 
 
@@ -61,24 +61,28 @@ This is a **React-based web application** designed as a micro-learning platform.
 ## Folder Structure
 
 ```plaintext
-src/
-├── components/
-│   ├── Navbar.js                   
-│   ├── admin/
-│   │   ├── AdminDashboard.js  
-│   │   ├── AdminLogin.js      
-│   │   ├── AddTopic.js      
-│   │   └── AddQuestion.js   
-│   └── user/
-│       ├── Login.js           
-│       ├── Register.js      
-│       ├── TopicsList.js     
-│       └── Quiz.js         
-├── App.js                 
-├── index.js              
-├── styles/               
-└── utils/                
-```
+Micro-Learning-Platform/
+├── Micro-learning-backend/
+   └── server.js
+├── Micro-learning-frontend
+   └── src/
+      ├── components/
+      │   ├── Navbar.js                   
+      │   ├── admin/
+      │   │   ├── AdminDashboard.js  
+      │   │   ├── AdminLogin.js      
+      │   │   ├── AddTopic.js      
+      │   │   └── AddQuestion.js   
+      │   └── user/
+      │       ├── Login.js           
+      │       ├── Register.js      
+      │       ├── TopicsList.js     
+      │       └── Quiz.js         
+      ├── App.js                 
+      ├── index.js              
+      ├── styles/               
+      └── utils/                
+   ```
 
 ---
 
