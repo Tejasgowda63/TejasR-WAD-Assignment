@@ -22,6 +22,7 @@
 
 - **Leetcode 179: Largest Number**
 
+```bash
     class Solution:
         def largestNumber(nums):
             num_strs = []
@@ -42,9 +43,11 @@
             if result[0] == '0':
                 return '0'
             return result
+```
 
 - **Leetcode 21: Merge Two Sorted Lists**
-    
+  
+```bash
     class ListNode:
         def __init__(self, val=0, next=None):
             self.val = val
@@ -66,3 +69,4 @@
             else:
                 current.next = list2
             return dummy.next
+```
