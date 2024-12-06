@@ -11,12 +11,15 @@ This is a **React-based web application** designed as a micro-learning platform.
 ## User Dashboard
 ![image](https://github.com/user-attachments/assets/d92caae7-d4b8-4439-b655-bd30abfd255f)
 
+## Quiz
+![image](https://github.com/user-attachments/assets/c3f901ef-65e4-4de9-b1a7-c99ac53b5279)
+
 
 ## Admin Login Credentials
 
 - **Username**: admin@gmail.com
 - **Password**: admin1234
-- 
+
 ---
 ## Admin Login
 ![image](https://github.com/user-attachments/assets/ac4d37cc-eb2d-4a9b-8113-e1bbbd51965e)
