@@ -9,7 +9,8 @@ import Register from './components/user/Register';
 import TopicList from './components/user/TopicsList';
 import Quiz from './components/user/Quiz';
 import Navbar from './components/Navbar';
-
+import AdminLogin from './components/admin/AdminLogin';
+import AdminDashboard from './components/admin/AdminDashboard';
 
 const App = () => {
   const [topics, setTopics] = useState([]);
@@ -79,6 +80,8 @@ const App = () => {
       <div className="min-h-screen bg-gray-100 flex flex-col items-center py-6">
         <Router>
           <Routes>
+          <Route path="/admin/login" element={<AdminLogin />} />
+          <Route path="/admin/dashboard" element={<AdminDashboard />} />
             <Route path="/" element={isLoggedIn ? <Navigate to="/user/dashboard" /> : <Navigate to="/login" />} />
             <Route path="/login" element={!isLoggedIn ? (isRegistering ? (<Register onRegister={handleRegister} onToggleLogin={() => setIsRegistering(false)} />) 
             : (<Login onLogin={handleLogin} onToggleRegister={() => setIsRegistering(true)} />)) 
